@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thi Thử Toán 2025 - Thầy Quang Trí</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']], // Cho phép dùng $...$
+        displayMath: [['$$', '$$'], ['\\[', '\\]']], // Cho phép dùng $$...$$
+        processEscapes: true
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f4f9; }
         .container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
@@ -25,6 +39,9 @@
         
         #result-area { margin-top: 20px; padding: 20px; background-color: #e2e6ea; display: none; border-radius: 5px; }
         .score-display { font-size: 24px; color: #dc3545; font-weight: bold; }
+        
+        /* Fix lỗi hiển thị công thức quá dài trên điện thoại */
+        mjx-container { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
     </style>
 </head>
 <body>
@@ -182,3 +199,4 @@
 
 </body>
 </html>
+
